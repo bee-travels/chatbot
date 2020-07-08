@@ -2,3 +2,6 @@
 <p align='center'>
 <img src='images/logo.png' width='420' alt='Bee Travels logo'>
 </p>
+
+
+![Slack Gif](/images/Slack.gif)
