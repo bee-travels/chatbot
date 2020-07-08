@@ -4,4 +4,4 @@
 </p>
 
 
-![Slack Gif](/images/Slack.gif)
+![Bee-Travels Gif](/images/take1.gif)
