@@ -71,9 +71,9 @@ Log in to IBM Cloud and provision a Watson Assistant instance.
 To complete the steps in this tutorial you need:
 
 - A Slack workspace with administrative rights. [Learn how to create your Slack workspace](https://slack.com/help/articles/206845317-Create-a-Slack-workspace).
-- A [Watson Assistant COVID Crisis Communication Chatbot](https://github.com/Call-for-Code/Solution-Starter-Kit-Communication-2020#getting-started)
+- A [Watson Assistant Bee Travels Chatbot](https://github.com/Call-for-Code/Solution-Starter-Kit-Communication-2020#getting-started)
 
-Now, I'll show you how to integrate your Slack workspace with your COVID-19 chatbot.
+Now, I'll show you how to integrate your Slack workspace with your Bee Travels chatbot.
 
 ## Integrate Slack and your chatbot
 
@@ -124,7 +124,7 @@ On Watson Assistant Slack Integration page click **Save Changes**.
 Log into your Slack workspace and click on **Browse App**. Find the app you just created and add to your workspace:
 
 ### Step 12.
-Test your application by asking questions based on intents and entities in your dialog tree! If you recieve answers back you have successfully integrated your COVID Crisis Communication Assistant! Congratulations. 
+Test your application by asking questions based on intents and entities in your dialog tree! If you recieve answers back you have successfully integrated your Bee Travel chatbot! Congratulations. 
 
 
 ## Facebook Messenger Integration 
