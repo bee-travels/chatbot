@@ -1,37 +1,70 @@
 {
   "intents": [
     {
-      "intent": "Hotel_Selection",
+      "intent": "Car_Selection",
       "examples": [
         {
-          "text": "I am looking for a hotel"
+          "text": "car"
         },
         {
-          "text": "Can you show me some hotels"
+          "text": "I need a car"
         },
         {
-          "text": "Can you show me hotels ?"
+          "text": "where can i find a rental car"
         },
         {
-          "text": "I would like to see some hotels"
+          "text": "where can i get a car"
+        }
+      ],
+      "description": "I would like to find car options"
+    },
+    {
+      "intent": "Change_Location",
+      "examples": [
+        {
+          "text": "Change destination"
         },
         {
-          "text": "where should I stay"
+          "text": "change location"
         },
         {
-          "text": "Gimme hotels"
+          "text": "Change my destination"
         },
         {
-          "text": "I would like to find a hotel"
+          "text": "Change my location"
         },
         {
-          "text": "Give me some hotel options"
+          "text": "I want to change location"
         },
         {
-          "text": "hotels?"
+          "text": "i want to set a new destination"
+        },
+        {
+          "text": "I would like to change my location"
+        },
+        {
+          "text": "New Destination"
+        },
+        {
+          "text": "new location"
         }
       ],
       "description": ""
+    },
+    {
+      "intent": "Flight_Selection",
+      "examples": [
+        {
+          "text": "Flights"
+        },
+        {
+          "text": "Give me flights"
+        },
+        {
+          "text": "I would like to find flights"
+        }
+      ],
+      "description": "I would like to find flights"
     },
     {
       "intent": "Greeting",
@@ -49,124 +82,53 @@
       "description": ""
     },
     {
-      "intent": "Change_Location",
+      "intent": "Hotel_Selection",
       "examples": [
         {
-          "text": "Change my location"
+          "text": "Can you show me hotels ?"
         },
         {
-          "text": "i want to set a new destination"
+          "text": "Can you show me some hotels"
         },
         {
-          "text": "New Destination"
+          "text": "Gimme hotels"
         },
         {
-          "text": "I would like to change my location"
+          "text": "Give me some hotel options"
         },
         {
-          "text": "Change my destination"
+          "text": "hotels?"
         },
         {
-          "text": "change location"
+          "text": "I am looking for a hotel"
         },
         {
-          "text": "new location"
+          "text": "I would like to find a hotel"
         },
         {
-          "text": "I want to change location"
+          "text": "I would like to see some hotels"
         },
         {
-          "text": "Change destination"
+          "text": "Today"
+        },
+        {
+          "text": "where should I stay"
         }
       ],
       "description": ""
-    },
-    {
-      "intent": "Car_Selection",
-      "examples": [
-        {
-          "text": "I would like to find Car Rental Services"
-        },
-        {
-          "text": "car"
-        },
-        {
-          "text": "I need a car"
-        },
-        {
-          "text": "where can i find a rental car"
-        },
-        {
-          "text": "where can i get a car"
-        }
-      ],
-      "description": "I would like to find car options"
-    },
-    {
-      "intent": "Flight_Selection",
-      "examples": [
-        {
-          "text": "Flights"
-        },
-        {
-          "text": "Give me flights"
-        },
-        {
-          "text": "I would like to find flights"
-        }
-      ],
-      "description": "I would like to find flights"
     }
   ],
   "entities": [
     {
-      "entity": "reply",
+      "entity": "hotel_type",
       "values": [
         {
           "type": "synonyms",
-          "value": "Yes",
+          "value": "budget",
           "synonyms": [
-            "yep",
-            "you betcha",
-            "you bet",
-            "sure",
-            "ya",
-            "yup",
-            "y"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "No",
-          "synonyms": [
-            "nope",
-            "no thanks",
-            "na",
-            "nah",
-            "not now ",
-            "no way",
-            "no thank you",
-            "I dont think so "
-          ]
-        }
-      ],
-      "fuzzy_match": true
-    },
-    {
-      "entity": "sys-location",
-      "values": []
-    },
-    {
-      "entity": "type",
-      "values": [
-        {
-          "type": "synonyms",
-          "value": "None",
-          "synonyms": [
-            "none ",
-            "Doesn't matter",
-            "don't care",
-            "whatever"
+            "budget ",
+            "budget hotel",
+            "on a budget"
           ]
         },
         {
@@ -174,113 +136,119 @@
           "value": "comfort",
           "synonyms": [
             "Comfort",
-            "I'd like comfort",
-            "give me comfort"
+            "Comfort Hotel",
+            "I'd like a Comfort Hotel "
           ]
         },
         {
           "type": "synonyms",
-          "value": "budget",
+          "value": "Luxury",
           "synonyms": [
-            "budget hotel",
-            "budget is good",
-            "on a budget"
+            "5 star hotel ",
+            "Lux",
+            "Luxury ",
+            "Luxury Hotel"
           ]
         },
         {
           "type": "synonyms",
-          "value": "luxury",
+          "value": "None",
           "synonyms": [
-            "luxury",
-            "super luxury",
-            "Luxury to the max",
-            "Lux"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "basic",
-          "synonyms": [
-            "basic is good",
-            "I want basic"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "premium",
-          "synonyms": [
-            "give me premium",
-            "premium quality"
+            "Doesn't matter",
+            "don't care",
+            "none ",
+            "whatever"
           ]
         }
       ],
       "fuzzy_match": true
+    },
+    {
+      "entity": "location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Boston",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "London",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "New York",
+          "synonyms": [
+            "New York City"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "United Kingdom",
+          "synonyms": [
+            "England",
+            "UK"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "United States of America",
+          "synonyms": [
+            "United States",
+            "USA"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reply",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": [
+            "I dont think so ",
+            "na",
+            "nah",
+            "nope",
+            "no thanks",
+            "no thank you",
+            "not now ",
+            "no way"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": [
+            "sure",
+            "y",
+            "ya",
+            "yep",
+            "you bet",
+            "you betcha",
+            "yup"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-location",
+      "values": []
     },
     {
       "entity": "sys-number",
       "values": []
     },
     {
-      "entity": "car_type",
-      "values": [
-        {
-          "type": "synonyms",
-          "value": "muscle",
-          "synonyms": [
-            "muscel"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "sports",
-          "synonyms": [
-            "sport"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "crossover",
-          "synonyms": [
-            "cross over "
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "suv",
-          "synonyms": [
-            "utility vehicle"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "sedan",
-          "synonyms": [
-            "sadan"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "convertible",
-          "synonyms": [
-            "convertable "
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "hatchback",
-          "synonyms": [
-            "hatch back"
-          ]
-        }
-      ],
-      "fuzzy_match": true
-    },
-    {
       "entity": "sys-time",
-      "values": []
-    },
-    {
-      "entity": "sys-date",
       "values": []
     }
   ],
@@ -292,318 +260,73 @@
   },
   "dialog_nodes": [
     {
-      "type": "standard",
-      "title": "Change Destination ",
-      "parent": "node_1_1508425352942",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "Welcome"
-      },
-      "conditions": "#Change_Location",
-      "dialog_node": "node_10_1585858055961",
-      "previous_sibling": "node_4_1585774835361"
-    },
-    {
-      "type": "slot",
-      "parent": "node_1_1508425352942",
-      "variable": "$country",
-      "dialog_node": "slot_4_1585939996360",
-      "previous_sibling": "slot_6_1585775463850"
-    },
-    {
-      "type": "frame",
-      "title": "Car Search Criteria ",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank you for providing your check-in: $start_date and check out date :$end_date\n"
-              },
-              {
-                "text": "Thanks for providing your min price range - $min_price $ and max price range  $max_price $ "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "multiline"
-          },
-          {
-            "title": "What style of car are you seeking? ",
-            "options": [
-              {
-                "label": "basic",
-                "value": {
-                  "input": {
-                    "text": "Car style selected is : basic"
-                  }
-                }
-              },
-              {
-                "label": "luxury",
-                "value": {
-                  "input": {
-                    "text": "Car style selected is : luxury"
-                  }
-                }
-              },
-              {
-                "label": "premium",
-                "value": {
-                  "input": {
-                    "text": "Car style selected is :  premium"
-                  }
-                }
-              },
-              {
-                "label": "Doesn’t Matter ",
-                "value": {
-                  "input": {
-                    "text": "Car style selected is : None"
-                  }
-                }
-              }
-            ],
-            "description": "Car Style",
-            "response_type": "option"
-          }
-        ]
-      },
-      "parent": "node_1_1508425352942",
-      "conditions": "#Car_Selection",
-      "dialog_node": "node_1_1593546937113",
-      "previous_sibling": "node_6_1585773212809"
-    },
-    {
-      "type": "frame",
-      "title": "Hotels Search Criteria",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank you for providing your check-in: $start_date and check out date :$end_date\n"
-              },
-              {
-                "text": "Thanks for providing your min price range - $min_price $ and max price range  $max_price $ "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "multiline"
-          },
-          {
-            "title": "What type of hotel are you seeking? ",
-            "options": [
-              {
-                "label": "budget",
-                "value": {
-                  "input": {
-                    "text": "Hotel type selected is : budget"
-                  }
-                }
-              },
-              {
-                "label": "comfort",
-                "value": {
-                  "input": {
-                    "text": "Hotel type selected is : comfort"
-                  }
-                }
-              },
-              {
-                "label": "luxury",
-                "value": {
-                  "input": {
-                    "text": "Hotel type selected is :  luxury"
-                  }
-                }
-              },
-              {
-                "label": "doesn’t matter ",
-                "value": {
-                  "input": {
-                    "text": "Hotel type selected is : None"
-                  }
-                }
-              }
-            ],
-            "description": "Seeking Hotel",
-            "response_type": "option"
-          }
-        ]
-      },
-      "parent": "node_1_1508425352942",
-      "conditions": "#Hotel_Selection",
-      "dialog_node": "node_6_1585773212809",
-      "previous_sibling": "slot_4_1585939996360"
-    },
-    {
-      "type": "standard",
-      "title": "Flight ",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Here are flights"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_1_1508425352942",
-      "conditions": "#Flight_Selection",
-      "dialog_node": "node_4_1585774835361",
-      "previous_sibling": "node_1_1593546937113"
-    },
-    {
-      "type": "slot",
-      "parent": "node_1_1508425352942",
-      "variable": "$city",
-      "dialog_node": "slot_6_1585775463850"
-    },
-    {
       "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "What is your minimum price range "
-          ],
-          "selection_policy": "sequential"
-        }
+      "output": {},
+      "parent": "slot_6_1585857132512",
+      "context": {
+        "hotel_type": "@hotel_type"
       },
-      "parent": "slot_17_1593546937122",
-      "event_name": "focus",
-      "dialog_node": "handler_19_1593546937122",
-      "previous_sibling": "handler_18_1593546937122"
+      "conditions": "@hotel_type",
+      "event_name": "input",
+      "dialog_node": "handler_10_1585857132539"
     },
     {
       "type": "event_handler",
       "output": {},
-      "parent": "slot_17_1593546937122",
+      "parent": "slot_1_1587068119025",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1587068119044",
+      "previous_sibling": "handler_5_1587068119044"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1585853000581",
       "context": {
         "min_price": "@sys-number"
       },
       "conditions": "@sys-number",
       "event_name": "input",
-      "dialog_node": "handler_18_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "What city will you be going to ? "
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_6_1585775463850",
-      "event_name": "focus",
-      "dialog_node": "handler_6_1585775463870",
-      "previous_sibling": "handler_2_1585775463870"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_6_1585775463850",
-      "context": {
-        "city": "@sys-location"
-      },
-      "conditions": "@sys-location",
-      "event_name": "input",
-      "dialog_node": "handler_2_1585775463870"
-    },
-    {
-      "type": "frame",
-      "title": "Hotel Type - Matters",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your hotel selection  - $hotel_type. Here are your options:\n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/hotels?max=$max_price&min=$min_price&t=$hotel_type"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_6_1585773212809",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1508425352942"
-      },
-      "conditions": "@type",
-      "dialog_node": "node_5_1587068061645",
-      "previous_sibling": "node_9_1585857109265"
-    },
-    {
-      "type": "slot",
-      "parent": "node_6_1585773212809",
-      "variable": "$start_date",
-      "dialog_node": "slot_8_1585773759417",
-      "previous_sibling": "node_5_1587068061645"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_6_1585773212809",
-      "variable": "$max_price",
-      "dialog_node": "slot_3_1585853071411",
-      "previous_sibling": "slot_8_1585853000581"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_6_1585773212809",
-      "variable": "$min_price",
-      "dialog_node": "slot_8_1585853000581",
-      "previous_sibling": "slot_2_1585774213923"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_6_1585773212809",
-      "variable": "$end_date",
-      "dialog_node": "slot_2_1585774213923",
-      "previous_sibling": "slot_8_1585773759417"
-    },
-    {
-      "type": "frame",
-      "title": "Hotel Type - Doesn't Matter",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your hotel selection  - $hotel_type. Here are your options: \n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/hotels?max=$max_price&min=$min_price"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_6_1585773212809",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1508425352942"
-      },
-      "conditions": "@type:None",
-      "dialog_node": "node_9_1585857109265",
-      "previous_sibling": "handler_1_1585930623842"
+      "dialog_node": "handler_1_1585853000586"
     },
     {
       "type": "event_handler",
       "parent": "node_6_1585773212809",
       "event_name": "focus",
       "dialog_node": "handler_1_1585930623842"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1585774213923",
+      "context": {
+        "end_date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_2_1585774213932"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1585775463850",
+      "context": {
+        "city": "@location"
+      },
+      "conditions": "@location",
+      "event_name": "input",
+      "dialog_node": "handler_2_1585775463870"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1585939996360",
+      "context": {
+        "country": "@location"
+      },
+      "conditions": "@location",
+      "event_name": "input",
+      "dialog_node": "handler_2_1585939996367"
     },
     {
       "type": "event_handler",
@@ -622,223 +345,14 @@
     },
     {
       "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "Invalid Price "
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_3_1585853071411",
-      "next_step": {
-        "behavior": "reprompt"
-      },
-      "conditions": "@sys-number < $min_price",
-      "event_name": "filled",
-      "dialog_node": "handler_7_1585855566330",
-      "previous_sibling": "handler_3_1585853071415"
-    },
-    {
-      "type": "event_handler",
       "output": {},
-      "parent": "slot_3_1585853071411",
+      "parent": "slot_8_1585773759417",
       "context": {
-        "max_price": "@sys-number"
-      },
-      "conditions": "@sys-number",
-      "event_name": "input",
-      "dialog_node": "handler_8_1585853071414"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_6_1585857132512",
-      "event_name": "focus",
-      "dialog_node": "handler_6_1585857132539",
-      "previous_sibling": "handler_10_1585857132539"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_6_1585857132512",
-      "context": {
-        "hotel_type": "@type"
-      },
-      "conditions": "@type",
-      "event_name": "input",
-      "dialog_node": "handler_10_1585857132539"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_3_1593621400243",
-      "event_name": "focus",
-      "dialog_node": "handler_9_1593621400254",
-      "previous_sibling": "handler_1_1593621400254"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_3_1593621400243",
-      "context": {
-        "car_type": "@car_type"
-      },
-      "conditions": "@car_type",
-      "event_name": "input",
-      "dialog_node": "handler_1_1593621400254"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "Invalid end date"
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_13_1593546937122",
-      "next_step": {
-        "behavior": "reprompt"
-      },
-      "conditions": "@sys-date < $start_date",
-      "event_name": "filled",
-      "dialog_node": "handler_16_1593546937122",
-      "previous_sibling": "handler_15_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Your start date is $start_date . Please provide a valid end date "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "slot_13_1593546937122",
-      "event_name": "focus",
-      "dialog_node": "handler_15_1593546937122",
-      "previous_sibling": "handler_14_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_13_1593546937122",
-      "context": {
-        "end_date": "@sys-date"
+        "start_date": "@sys-date"
       },
       "conditions": "@sys-date",
       "event_name": "input",
-      "dialog_node": "handler_14_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "Your minimum price  is $min_price $ . Please provide your maximum price range"
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_20_1593546937122",
-      "event_name": "focus",
-      "dialog_node": "handler_22_1593546937122",
-      "previous_sibling": "handler_21_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "Invalid Price "
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_20_1593546937122",
-      "next_step": {
-        "behavior": "reprompt"
-      },
-      "conditions": "@sys-number < $min_price",
-      "event_name": "filled",
-      "dialog_node": "handler_23_1593546937122",
-      "previous_sibling": "handler_22_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_20_1593546937122",
-      "context": {
-        "max_price": "@sys-number"
-      },
-      "conditions": "@sys-number",
-      "event_name": "input",
-      "dialog_node": "handler_21_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_4_1593621673649",
-      "event_name": "focus",
-      "dialog_node": "handler_6_1593621673649",
-      "previous_sibling": "handler_5_1593621673649"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_4_1593621673649",
-      "context": {
-        "car_type": "@car_type"
-      },
-      "conditions": "@car_type",
-      "event_name": "input",
-      "dialog_node": "handler_5_1593621673649"
-    },
-    {
-      "type": "slot",
-      "parent": "node_9_1585857109265",
-      "variable": "$hotel_type",
-      "dialog_node": "slot_6_1585857132512"
-    },
-    {
-      "type": "slot",
-      "parent": "node_5_1587068061645",
-      "variable": "$hotel_type",
-      "dialog_node": "slot_1_1587068119025"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "What is your minimum price range "
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_8_1585853000581",
-      "event_name": "focus",
-      "dialog_node": "handler_5_1585853000586",
-      "previous_sibling": "handler_1_1585853000586"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_8_1585853000581",
-      "context": {
-        "min_price": "@sys-number"
-      },
-      "conditions": "@sys-number",
-      "event_name": "input",
-      "dialog_node": "handler_1_1585853000586"
+      "dialog_node": "handler_4_1585773759450"
     },
     {
       "type": "event_handler",
@@ -865,89 +379,68 @@
       "output": {
         "text": {
           "values": [
-            "Invalid check-out date"
+            "What is your minimum price range "
           ],
           "selection_policy": "sequential"
         }
       },
-      "parent": "slot_2_1585774213923",
-      "next_step": {
-        "behavior": "reprompt"
-      },
-      "conditions": "@sys-date < $start_date",
-      "event_name": "filled",
-      "dialog_node": "handler_9_1585854882357",
-      "previous_sibling": "handler_4_1585774213932"
+      "parent": "slot_8_1585853000581",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1585853000586",
+      "previous_sibling": "handler_1_1585853000586"
     },
     {
       "type": "event_handler",
       "output": {},
-      "parent": "slot_2_1585774213923",
+      "parent": "slot_1_1587068119025",
       "context": {
-        "end_date": "@sys-date"
+        "hotel_type": "@hotel_type"
       },
-      "conditions": "@sys-date",
+      "conditions": "@hotel_type",
       "event_name": "input",
-      "dialog_node": "handler_2_1585774213932"
+      "dialog_node": "handler_5_1587068119044"
     },
     {
-      "type": "frame",
-      "title": "Car Type - Matters ",
+      "type": "event_handler",
       "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your selection. Here are your options: \n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/cars?max=$max_price&min=$min_price&t=$car_type&cs=$car_style"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
+        "text": {
+          "values": [
+            "What city will you be going to ? "
+          ],
+          "selection_policy": "sequential"
+        }
       },
-      "parent": "node_6_1593546937122",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1508425352942"
-      },
-      "conditions": "@car_type",
-      "dialog_node": "node_3_1593621673642",
-      "previous_sibling": "node_2_1593621633896"
+      "parent": "slot_6_1585775463850",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1585775463870",
+      "previous_sibling": "handler_2_1585775463870"
     },
     {
-      "type": "slot",
+      "type": "event_handler",
       "output": {},
-      "parent": "node_6_1593546937122",
-      "variable": "$car_style",
-      "dialog_node": "slot_7_1593546937122",
-      "previous_sibling": "node_3_1593621673642"
+      "parent": "slot_6_1585857132512",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1585857132539",
+      "previous_sibling": "handler_10_1585857132539"
     },
     {
-      "type": "frame",
-      "title": "Car Type - Doesn't Matter ",
+      "type": "event_handler",
       "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your selection. Here are your options: \n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/cars?max=$max_price&min=$min_price&cs=$car_style"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
+        "text": {
+          "values": [
+            "Invalid Price "
+          ],
+          "selection_policy": "sequential"
+        }
       },
-      "parent": "node_6_1593546937122",
+      "parent": "slot_3_1585853071411",
       "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1508425352942"
+        "behavior": "reprompt"
       },
-      "conditions": "@type:None",
-      "dialog_node": "node_2_1593621633896"
+      "conditions": "@sys-number < $min_price",
+      "event_name": "filled",
+      "dialog_node": "handler_7_1585855566330",
+      "previous_sibling": "handler_3_1585853071415"
     },
     {
       "type": "event_handler",
@@ -967,20 +460,32 @@
     {
       "type": "event_handler",
       "output": {},
-      "parent": "slot_8_1585773759417",
+      "parent": "slot_3_1585853071411",
       "context": {
-        "start_date": "@sys-date"
+        "max_price": "@sys-number"
       },
-      "conditions": "@sys-date",
+      "conditions": "@sys-number",
       "event_name": "input",
-      "dialog_node": "handler_4_1585773759450"
+      "dialog_node": "handler_8_1585853071414"
     },
     {
-      "type": "slot",
-      "output": {},
-      "parent": "node_3_1593621673642",
-      "variable": "$car_type",
-      "dialog_node": "slot_4_1593621673649"
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Invalid check-out date"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1585774213923",
+      "next_step": {
+        "behavior": "reprompt"
+      },
+      "conditions": "@sys-date < $start_date",
+      "event_name": "filled",
+      "dialog_node": "handler_9_1585854882357",
+      "previous_sibling": "handler_4_1585774213932"
     },
     {
       "type": "event_handler",
@@ -998,343 +503,17 @@
       "previous_sibling": "handler_2_1585939996367"
     },
     {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_4_1585939996360",
-      "context": {
-        "country": "@sys-location"
-      },
-      "conditions": "@sys-location",
-      "event_name": "input",
-      "dialog_node": "handler_2_1585939996367"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_1_1587068119025",
-      "event_name": "focus",
-      "dialog_node": "handler_10_1587068119044",
-      "previous_sibling": "handler_5_1587068119044"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_1_1587068119025",
-      "context": {
-        "hotel_type": "@type"
-      },
-      "conditions": "@type",
-      "event_name": "input",
-      "dialog_node": "handler_5_1587068119044"
-    },
-    {
-      "type": "slot",
-      "parent": "node_1_1593621209050",
-      "variable": "$car_type",
-      "dialog_node": "slot_3_1593621400243"
-    },
-    {
-      "type": "frame",
-      "title": "Car Type - Matters ",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your selection. Here are your options: \n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/cars?max=$max_price&min=$min_price&t=$car_type"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_2_1593546937122",
+      "type": "standard",
+      "title": "Change Destination ",
+      "parent": "node_1_1508425352942",
       "next_step": {
         "behavior": "jump_to",
         "selector": "body",
-        "dialog_node": "node_1_1508425352942"
+        "dialog_node": "Welcome"
       },
-      "conditions": "@car_type",
-      "dialog_node": "node_1_1593621209050",
-      "previous_sibling": "node_1_1593620210813"
-    },
-    {
-      "type": "frame",
-      "title": "Car Type - Doesn't Matter",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Thank You for providing your selection. Here are your options: \n\n --> https://bee-travels.v2.ibmdeveloper.net/destinations/$country/$city/cars?max=$max_price&min=$min_price"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_2_1593546937122",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1508425352942"
-      },
-      "conditions": "@type:None",
-      "dialog_node": "node_1_1593620210813"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_7_1593546937122",
-      "event_name": "focus",
-      "dialog_node": "handler_9_1593546937122",
-      "previous_sibling": "handler_8_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_7_1593546937122",
-      "context": {
-        "car_style": "@type"
-      },
-      "conditions": "@type",
-      "event_name": "input",
-      "dialog_node": "handler_8_1593546937122"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_1_1593546937113",
-      "variable": "$max_price",
-      "dialog_node": "slot_20_1593546937122",
-      "previous_sibling": "slot_17_1593546937122"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_1_1593546937113",
-      "variable": "$min_price",
-      "dialog_node": "slot_17_1593546937122",
-      "previous_sibling": "slot_13_1593546937122"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_1_1593546937113",
-      "variable": "$start_date",
-      "dialog_node": "slot_10_1593546937122",
-      "previous_sibling": "node_6_1593546937122"
-    },
-    {
-      "type": "frame",
-      "title": "Car Style - Doesn't Matter",
-      "output": {
-        "generic": [
-          {
-            "title": "What type of car are you seeking? ",
-            "options": [
-              {
-                "label": "suv",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : suv"
-                  }
-                }
-              },
-              {
-                "label": "sedan",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : sedan"
-                  }
-                }
-              },
-              {
-                "label": "sports",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : sports"
-                  }
-                }
-              },
-              {
-                "label": "convertible",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : convertible"
-                  }
-                }
-              },
-              {
-                "label": "hatchback",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : hatchback"
-                  }
-                }
-              },
-              {
-                "label": "crossover",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : crossover"
-                  }
-                }
-              },
-              {
-                "label": "muscle",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : muscle"
-                  }
-                }
-              },
-              {
-                "label": "doesn't matter",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : none"
-                  }
-                }
-              }
-            ],
-            "description": "Car Type",
-            "response_type": "option"
-          }
-        ]
-      },
-      "parent": "node_1_1593546937113",
-      "conditions": "@type:None",
-      "dialog_node": "node_2_1593546937122",
-      "previous_sibling": "handler_24_1593546937122"
-    },
-    {
-      "type": "frame",
-      "title": "Car Style - Matters",
-      "output": {
-        "generic": [
-          {
-            "title": "What type of car are you seeking? ",
-            "options": [
-              {
-                "label": "suv",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : suv"
-                  }
-                }
-              },
-              {
-                "label": "sedan",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : sedan"
-                  }
-                }
-              },
-              {
-                "label": "muscle",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : muscle"
-                  }
-                }
-              },
-              {
-                "label": "convertible",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : convertible"
-                  }
-                }
-              },
-              {
-                "label": "crossover",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : crossover"
-                  }
-                }
-              },
-              {
-                "label": "sports",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : sports"
-                  }
-                }
-              },
-              {
-                "label": "hatchback",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : hatchback"
-                  }
-                }
-              },
-              {
-                "label": "doesn't matter",
-                "value": {
-                  "input": {
-                    "text": "Car type selected is : none"
-                  }
-                }
-              }
-            ],
-            "description": "Car Type",
-            "response_type": "option"
-          }
-        ]
-      },
-      "parent": "node_1_1593546937113",
-      "conditions": "@type",
-      "dialog_node": "node_6_1593546937122",
-      "previous_sibling": "node_2_1593546937122"
-    },
-    {
-      "type": "slot",
-      "output": {},
-      "parent": "node_1_1593546937113",
-      "variable": "$end_date",
-      "dialog_node": "slot_13_1593546937122",
-      "previous_sibling": "slot_10_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "generic": []
-      },
-      "parent": "node_1_1593546937113",
-      "event_name": "focus",
-      "dialog_node": "handler_24_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {
-        "text": {
-          "values": [
-            "What is your start date ? "
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "slot_10_1593546937122",
-      "event_name": "focus",
-      "dialog_node": "handler_12_1593546937122",
-      "previous_sibling": "handler_11_1593546937122"
-    },
-    {
-      "type": "event_handler",
-      "output": {},
-      "parent": "slot_10_1593546937122",
-      "context": {
-        "start_date": "@sys-date"
-      },
-      "conditions": "@sys-date",
-      "event_name": "input",
-      "dialog_node": "handler_11_1593546937122"
+      "conditions": "#Change_Location",
+      "dialog_node": "node_10_1585858055961",
+      "previous_sibling": "node_4_1585775772651"
     },
     {
       "type": "standard",
@@ -1412,9 +591,222 @@
         "min_price": null,
         "start_date": null
       },
-      "conditions": "@sys-location",
+      "conditions": "@location",
       "dialog_node": "node_1_1508425352942",
       "previous_sibling": "node_10_1587065131449"
+    },
+    {
+      "type": "standard",
+      "title": "Flight ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are flights"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1508425352942",
+      "conditions": "#Flight_Selection",
+      "dialog_node": "node_4_1585774835361",
+      "previous_sibling": "node_6_1585773212809"
+    },
+    {
+      "type": "standard",
+      "title": "Car",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your car options"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1508425352942",
+      "conditions": "#Car_Selection",
+      "dialog_node": "node_4_1585775772651",
+      "previous_sibling": "node_4_1585774835361"
+    },
+    {
+      "type": "frame",
+      "title": "Hotel Type - Matters",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank You for providing your hotel selection  - $hotel_type. Here are your options:\n\n --> http://localhost:3000/destination?city=$city&country=$country&ht=$hotel_type"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1585773212809",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1508425352942"
+      },
+      "conditions": "@hotel_type",
+      "dialog_node": "node_5_1587068061645",
+      "previous_sibling": "node_9_1585857109265"
+    },
+    {
+      "type": "frame",
+      "title": "Hotels Search Criteria",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for providing your check-in: $start_date and check out date :$end_date\n"
+              },
+              {
+                "text": "Thanks for providing your min price range - $min_price $ and max price range  $max_price $ "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "What type of hotel are you seeking? ",
+            "options": [
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Hotel type selected is : Budget"
+                  }
+                }
+              },
+              {
+                "label": "Comfort",
+                "value": {
+                  "input": {
+                    "text": "Hotel type selected is : Comfort"
+                  }
+                }
+              },
+              {
+                "label": "Luxury",
+                "value": {
+                  "input": {
+                    "text": "Hotel type selected is :  Luxury"
+                  }
+                }
+              },
+              {
+                "label": "Doesn’t Matter ",
+                "value": {
+                  "input": {
+                    "text": "Hotel type selected is : None"
+                  }
+                }
+              }
+            ],
+            "description": "Seeking Hotel",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1508425352942",
+      "conditions": "#Hotel_Selection",
+      "dialog_node": "node_6_1585773212809",
+      "previous_sibling": "slot_4_1585939996360"
+    },
+    {
+      "type": "frame",
+      "title": "Hotel Type - Doesn't Matter",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank You for providing your hotel selection  - $hotel_type. Here are your options: \n\n -->  http://localhost:3000/destination?city=$city&country=$country"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1585773212809",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1508425352942"
+      },
+      "conditions": "@hotel_type:None",
+      "dialog_node": "node_9_1585857109265",
+      "previous_sibling": "handler_1_1585930623842"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1587068061645",
+      "variable": "$hotel_type",
+      "dialog_node": "slot_1_1587068119025"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1585773212809",
+      "variable": "$end_date",
+      "dialog_node": "slot_2_1585774213923",
+      "previous_sibling": "slot_8_1585773759417"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1585773212809",
+      "variable": "$max_price",
+      "dialog_node": "slot_3_1585853071411",
+      "previous_sibling": "slot_8_1585853000581"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1508425352942",
+      "variable": "$country",
+      "dialog_node": "slot_4_1585939996360",
+      "previous_sibling": "slot_6_1585775463850"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1508425352942",
+      "variable": "$city",
+      "dialog_node": "slot_6_1585775463850"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1585857109265",
+      "variable": "$hotel_type",
+      "dialog_node": "slot_6_1585857132512"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1585773212809",
+      "variable": "$start_date",
+      "dialog_node": "slot_8_1585773759417",
+      "previous_sibling": "node_5_1587068061645"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1585773212809",
+      "variable": "$min_price",
+      "dialog_node": "slot_8_1585853000581",
+      "previous_sibling": "slot_2_1585774213923"
     },
     {
       "type": "standard",
