@@ -125,6 +125,3 @@ Log into your Slack workspace and click on **Browse App**. Find the app you just
 
 ### Step 12.
 Test your application by asking questions based on intents and entities in your dialog tree! If you recieve answers back you have successfully integrated your Bee Travel chatbot! Congratulations. 
-
-
-## Facebook Messenger Integration 
